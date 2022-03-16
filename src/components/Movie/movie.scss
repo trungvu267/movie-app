@@ -1,0 +1,13 @@
+@use "../../scss/" as *;
+
+.movie {
+  padding: 1rem;
+  // background-color: $grayishBlue;
+  // border: 1px solid red;
+  // position: relative;
+  img {
+    width: 150px;
+    height: 225px;
+    border-radius: 5px;
+  }
+}

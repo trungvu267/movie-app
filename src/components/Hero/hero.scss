@@ -1,0 +1,71 @@
+@use "../../scss/" as *;
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $grayBlue;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+  }
+  .container {
+    height: 100%;
+    @include flex(space-around, center);
+  }
+  &__text {
+    width: 500px;
+    color: $white;
+    z-index: 100;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+    padding-bottom: 20px;
+  }
+  &__des {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+}
+@include mobile {
+  .hero {
+    &__title {
+      text-align: center;
+    }
+    &__des {
+      display: none;
+    }
+
+    .container {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+  }
+}
+@include tablet {
+  .hero {
+    &__title {
+      text-align: center;
+    }
+    &__des {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .container {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+  }
+}

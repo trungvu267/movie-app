@@ -1,0 +1,20 @@
+@use "../../scss/" as *;
+
+.video_trailer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($color: $grayBlue, $alpha: 0.75);
+  z-index: 100;
+  @include flex(center, center);
+}
+.close {
+  position: fixed;
+  color: white;
+  font-size: 20px;
+  top: 15%;
+  right: 20%;
+  cursor: pointer;
+}

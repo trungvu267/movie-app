@@ -1,0 +1,36 @@
+@use "../../scss/" as *;
+@use "../../components/Movie/movie.scss" as *;
+.casts {
+  .container {
+    @include flex(space-between, center);
+    flex-wrap: wrap;
+  }
+  h1 {
+    padding-top: 1rem;
+    color: $white;
+  }
+}
+.cast {
+  @extend .movie;
+  color: $white;
+
+  &__character {
+    font-weight: lighter;
+  }
+}
+@include mobile {
+  .casts {
+    .container {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+  }
+}
+@include tablet {
+  .casts {
+    .container {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+  }
+}
