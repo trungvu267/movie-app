@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-box/static/css/main.5ea35846.css",
+    "main.js": "/movie-box/static/js/main.a1f60f54.js",
+    "index.html": "/movie-box/index.html",
+    "main.5ea35846.css.map": "/movie-box/static/css/main.5ea35846.css.map",
+    "main.a1f60f54.js.map": "/movie-box/static/js/main.a1f60f54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ea35846.css",
+    "static/js/main.a1f60f54.js"
+  ]
+}
