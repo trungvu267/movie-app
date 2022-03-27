@@ -7,7 +7,6 @@ import Row from '../components/Row/Row'
 const TvSeries = () => {
   return (
     <div>
-        <Nav />
         <Row fetchUrl={requests.getPopularTv} search={requests.searchTv}/>
     </div>
   )

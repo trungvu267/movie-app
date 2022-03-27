@@ -30,7 +30,6 @@ const Home = ({movie, setMovie, video, setVideo}) => {
   return (
     
     <UserContext.Provider value= {video}>
-      <Nav/>
       <Hero movie= {movie} video= {video}/>
     </UserContext.Provider>
     

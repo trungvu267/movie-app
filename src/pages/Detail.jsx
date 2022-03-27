@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState, useLayoutEffect} from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 
 import requests from '../api/requests'
@@ -12,7 +12,7 @@ const Detail = ({movie, setMovie, video, setVideo}) => {
     const location = useLocation();
 
     const [casts, setCasts] = useState([])
-    useEffect(()=>{
+    useLayoutEffect(()=>{
     const fetchDetal =   (location.pathname=== `/tvseries/${id}`)? (requests.getDetalTv(id)) :(requests.getDetalMovie(id))
     fetchDetal
       .then(res=>{

@@ -3,7 +3,7 @@ import React from 'react'
 import './casts.scss'
 
 import { motion } from 'framer-motion'
-import { variants } from '../../animation/animation'
+import { items } from '../../animation/animation'
 
 const Casts = ({casts}) => {
     const castItem =casts.filter((e,i)=> i<=5 ? e: null)
@@ -28,7 +28,7 @@ const Cast = ({cast, index}) =>{
         custom={index}
         initial='hidden'
         animate="visible"
-        variants={variants}
+        variants={items}
         whileHover={{
             y: -15,
             x:15,

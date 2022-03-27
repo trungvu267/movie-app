@@ -7,7 +7,6 @@ import Row from '../components/Row/Row'
 const Movies = () => {
   return (
     <>
-        <Nav />
         <Row fetchUrl={requests.getPopularMovie} search = {requests.search}/>
     </>
   )

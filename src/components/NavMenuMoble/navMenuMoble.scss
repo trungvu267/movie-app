@@ -1,0 +1,19 @@
+@use "../../scss/" as *;
+.menu_moble {
+  display: flex;
+  position: fixed;
+  background-color: rgba($color: $very-dark-grayish-blue, $alpha: 0.9);
+  //   background-color: $very-dark-grayish-blue;
+  width: 70%;
+  height: 49vh;
+  display: flex;
+  top: -25%;
+  left: -25%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  transform: translate(60%, 85%);
+  flex-direction: column;
+  border-radius: 5px;
+  z-index: 100;
+}

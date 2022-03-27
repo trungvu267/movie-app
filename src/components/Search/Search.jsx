@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import './search.scss' 
+
+import { motion } from 'framer-motion'
 const Search = ({setMovieSearch}) => {
   const [input, setInput] = useState('')
   const handleChange = (e) =>{

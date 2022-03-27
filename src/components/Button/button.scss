@@ -23,6 +23,13 @@
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
+// button
+
+.burger {
+  @include flex(center, center);
+  cursor: pointer;
+  display: none;
+}
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -46,6 +53,9 @@
 @include mobile {
   .button__container {
     @include flex(center, center);
+  }
+  .burger {
+    display: block;
   }
 }
 

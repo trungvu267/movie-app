@@ -15,10 +15,7 @@ const VideoTrailer = ({setOpen}) => {
     const officialTrailer = video.find(item=>(item.name= 'Official Trailer' || item.type === 'Trailer'))
 
     
-    const opts = {
-        height: '390',
-        width: '640',
-    }
+    
 
     const handleBtnClose = () =>{
         setOpen(false)
@@ -40,7 +37,7 @@ const VideoTrailer = ({setOpen}) => {
                 
             >
                 <div className="close" onClick={handleBtnClose}>X</div>
-                <YouTube videoId={video.length === 0 ? 'zdp4ZftO_vo' : officialTrailer.key||video[0].key} opts={opts} onReady={onReady}/>
+                <YouTube videoId={video.length === 0 ? 'zdp4ZftO_vo' : officialTrailer.key||video[0].key}  onReady={onReady}/>
                
             </motion.div>
         </div>,

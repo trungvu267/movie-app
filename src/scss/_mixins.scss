@@ -4,7 +4,6 @@
   display: flex;
   justify-content: $a;
   align-items: $b;
-  //   flex-direction: $c;
 }
 
 // break points
@@ -14,12 +13,6 @@
     @content;
   }
 }
-
-// @mixin tablet {
-//   @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
-//     @content;
-//   }
-// }
 
 @mixin tablet {
   @media (max-width: #{$tablet-width - 1px}) {

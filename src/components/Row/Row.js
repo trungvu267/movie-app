@@ -1,12 +1,14 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect,useState} from 'react'
 import './row.scss'
 
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Movie from '../Movie/Movie'
 import Search from '../Search/Search'
 import { Loader } from '../Button/Button'
+import { items} from '../../animation/animation'
 
 
 const Row = ({fetchUrl, search}) => {
@@ -71,11 +73,15 @@ useEffect(()=>{
           hasMore={true}
           loader={Loader}
       >
-        <div className='row container'> 
+        <motion.div 
+          className='row container'
+          variants={items}
+          initial='hidden'
+          animate='visible'
+        > 
+            
             {movie_el}
-           
-
-        </div>
+        </motion.div>
 
       </InfiniteScroll>
     </>

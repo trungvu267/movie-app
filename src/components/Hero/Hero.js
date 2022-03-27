@@ -1,22 +1,25 @@
-import React, {useState, useContext} from 'react'
+import React, {useState} from 'react'
 import { motion } from 'framer-motion'
 
 import './hero.scss' 
 import Movie from '../Movie/Movie'
 import VideoTrailer from '../VideoTrainer/VideoTrailer'
 import { RegButton } from '../Button/Button'
-import {list, item} from '../../animation/animation'
-import { UserContext } from '../../App'
+import {opacity,movieHero,textContainer, textItem} from '../../animation/animation'
 
 
 const Hero = ({movie}) => {
 
   const [open, setOpen] = useState(false)
-  
-
 
   return (
-    <div className='hero' style={{
+    <motion.div 
+        variants={opacity}
+        initial='hidden'
+        animate='visible'
+        transition={{delay: 0.4, duration: 1 }}
+        className='hero' 
+        style={{
         backgroundImage: movie?.backdrop_path && `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -24,24 +27,32 @@ const Hero = ({movie}) => {
         <div className="container">
             <motion.div 
                 className="hero__text"
-                variants={list}
+                variants={textContainer}
                 initial='hidden'
                 animate='visible'
             >
-                <motion.div variants={item} className="hero__title">{movie.name||movie.title}</motion.div>
-                <motion.div variants={item} className="hero__des">{movie.overview}</motion.div>            
-                <motion.div variants={item}>
+                <motion.div variants={textItem} className="hero__title">{movie.name||movie.title}</motion.div>
+                <motion.div variants={textItem} className="hero__des">{movie.overview}</motion.div>            
+                <motion.div variants={textItem}>
 
                 {<RegButton setOpen={setOpen}/>}
                 </motion.div>
                 {open && <VideoTrailer setOpen={setOpen}/>}
             </motion.div>
+            <motion.div
+                variants={movieHero}
+                initial='hidden'
+                animate='visible'
 
-            <Movie movie={movie}/>            
+            >
+                <Movie movie={movie} index={1}/>            
+
+            </motion.div>
+           
         </div>
 
         
-    </div>
+    </motion.div>
 
   )
 }
