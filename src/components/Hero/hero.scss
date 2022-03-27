@@ -41,9 +41,16 @@
 }
 @include mobile {
   .hero {
+    &__text {
+      @include flex(center, center);
+      flex-direction: column;
+      width: 100vw;
+    }
     &__title {
       text-align: center;
       font-size: 32px;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
     &__des {
       display: none;
