@@ -17,7 +17,6 @@ const Hero = ({movie}) => {
         variants={opacity}
         initial='hidden'
         animate='visible'
-        transition={{delay: 0.4, duration: 1 }}
         className='hero' 
         style={{
         backgroundImage: movie?.backdrop_path && `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`, 
@@ -43,7 +42,6 @@ const Hero = ({movie}) => {
                 variants={movieHero}
                 initial='hidden'
                 animate='visible'
-
             >
                 <Movie movie={movie} index={1}/>            
 

@@ -4,6 +4,7 @@
   height: 100vh;
   background-color: $grayBlue;
   position: relative;
+  transition: background-image 2s;
   &::after {
     content: "";
     position: absolute;

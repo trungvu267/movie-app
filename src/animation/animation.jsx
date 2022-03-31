@@ -65,6 +65,7 @@ export const opacity = {
   },
   visible:{
       opacity: 1,
+      transition:{delay:1, duration: .45 }
   }  
 }
 export const movieHero= {
@@ -75,9 +76,6 @@ export const movieHero= {
   visible:{
     opacity: 1,
     x: 0,
-    transition:{
-      delay: 0.5,
-      duration: .45,
-    }
+    transition:{delay:1, duration: .45 }
   },
 }
